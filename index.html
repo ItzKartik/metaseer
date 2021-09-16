@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <link rel="icon" href="src/logo.png">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#000000">
+  <meta name="description" content="Metaseer">
+  <title>Metaseer</title>
+  <style>
+    body{
+      background: url('1116905.jpg') !important;
+      background-size: cover;
+    }
+  </style>
+  <link rel="stylesheet" href="style.css">
+  <link href="src/8.e94f92bb.chunk.css" rel="stylesheet">
+  <link href="src/main.4dbfb0a3.chunk.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="src/9.c9d8d158.chunk.css">
+
+  <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+    crossorigin="anonymous"></script>
+  <script
+    src="https://raw.githubusercontent.com/talmand/jquery-animate-numbers/master/jquery.animateNumbers.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js"></script>
+
+  <!-- <script src="script.js"></script>
+
+  <script src="main.js"></script>
+
+  <script src="ms_main.js"></script> -->
+
+  <script src="js/ms_main.js"></script>
+  <script src="js/new.js"></script>
+  
+
+  <style type="text/css">
+    
+    @keyframes tawkMaxOpen {
+      0% {
+        opacity: 0;
+        transform: translate(0, 30px);
+        ;
+      }
+
+      to {
+        opacity: 1;
+        transform: translate(0, 0px);
+      }
+    }
+
+    @-moz-keyframes tawkMaxOpen {
+      0% {
+        opacity: 0;
+        transform: translate(0, 30px);
+        ;
+      }
+
+      to {
+        opacity: 1;
+        transform: translate(0, 0px);
+      }
+    }
+
+    @-webkit-keyframes tawkMaxOpen {
+      0% {
+        opacity: 0;
+        transform: translate(0, 30px);
+        ;
+      }
+
+      to {
+        opacity: 1;
+        transform: translate(0, 0px);
+      }
+    }b
+
+    #n44algku00k81fel9la8e.open {
+      animation: tawkMaxOpen .25s ease !important;
+    }
+
+    @keyframes tawkMaxClose {
+      from {
+        opacity: 1;
+        transform: translate(0, 0px);
+        ;
+      }
+
+      to {
+        opacity: 0;
+        transform: translate(0, 30px);
+        ;
+      }
+    }
+
+    @-moz-keyframes tawkMaxClose {
+      from {
+        opacity: 1;
+        transform: translate(0, 0px);
+        ;
+      }
+
+      to {
+        opacity: 0;
+        transform: translate(0, 30px);
+        ;
+      }
+    }
+
+    @-webkit-keyframes tawkMaxClose {
+      from {
+        opacity: 1;
+        transform: translate(0, 0px);
+        ;
+      }
+
+      to {
+        opacity: 0;
+        transform: translate(0, 30px);
+        ;
+      }
+    }
+
+    #n44algku00k81fel9la8e.closed {
+      animation: tawkMaxClose .25s ease !important
+    }
+
+    #unstake_btn2 {
+      opacity: .5 !important;
+    }
+
+    .stake-settings_body__2OhzJ {
+      margin-top: 0px !important;
+    }
+  </style>
+
+</head>
+
+<body class="mobileOverflow">
+  <noscript>
+    <h1>You'll need to enable JavaScript to run this app.</h1>
+  </noscript>
+  <div id="root">
+    <div style="display: flex; min-height: 100vh;">
+      <div class="container">
+
+        <div class="stalking_body___9vcL">
+          <div class="MuiGrid-root MuiGrid-container">
+            <div class="MuiGrid-root header_accountContainer__2xLCF MuiGrid-item"
+              style="display: flex; align-items: center; justify-content: space-between; width: 100%; padding-top: 20px; padding-bottom: 20px;">
+              <div class="header_accountContainer__2xLCF">
+                <div class="userNav_wrap__3qBJa">
+                  <div class="userNav_hint__1IGDy"
+                    style="color: white; text-decoration-style: none !important; text-decoration-line:none;">Token Price
+                    : <span style="color: #E07416" id="tokenprice"></span></div><br>
+                  <button class="userNav_trigger__g_13h"
+                    onclick="location.href = 'https://pancakeswap.finance/info/token/0xFA1e1754BD2896D467930C97d07aF799C531Cb7D'">
+                    <div class="userNav_hint__1IGDy" style="text-decoration-line: none;">Buy Metas</div><img
+                      class="userNav_icon__1e42N" style="padding: 2px;" src="src/pancakeswap-cake-logo.png" alt=""><span
+                      class="userNav_dots__EMvih"></span>
+                  </button>
+                </div>
+                <div class="userNav_wrap__3qBJa">
+                  <button class="userNav_trigger__g_13h">
+                    <div class="userNav_hint__1IGDy user_address" style="word-break: break-word;"></div><img class="userNav_icon__1e42N"
+                      src="src/download.png" alt=""><span class="userNav_dots__EMvih"></span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="MuiGrid-root MuiGrid-container">
+            <div class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-12 MuiGrid-grid-xl-12">
+              <div class="MuiPaper-root MuiCard-root MuiPaper-elevation0 MuiPaper-rounded"
+                style="min-height: 700px; border-radius: 20px; border: 1px solid rgb(210, 214, 232); background-color: rgb(241, 243, 248); overflow: initial;">
+                <div class="card-header_wrap__1iafr" style="background-color: rgb(29, 34, 47);">
+                  <div class="card-header_total__vMtc4" style="color: rgb(255, 255, 255);">
+                  </div>
+                  <div class="card-header_buyCyptoButton__284xG" id="staking_rules">
+                    <div class="buy-crypto_container__1gqMI"><button onclick="staking_rules(this);"
+                        class="buy-crypto_button__32Z7g"><span>Staking Rules</span></button></div>
+                  </div>
+                  <div class="card-header_buyCyptoButton__284xG" id="dashboard" style="display: none;">
+                    <div class="buy-crypto_container__1gqMI"><button onclick="location.reload();"
+                        class="buy-crypto_button__32Z7g"><span>Dashboard</span></button></div>
+                  </div>
+                  <!-- <div class="card-header_buyCyptoButton__284xG" id="connect_btn">
+                    <div class="buy-crypto_container__1gqMI"><button onclick="connect_wallet();"
+                        class="buy-crypto_button__32Z7g"><span>Connect Wallet</span></button></div>
+                  </div> -->
+                </div>
+                <div></div>
+                <div class="card-table_container__3wkRX">
+                  <div class="card-table_mainContent__1CnV8">
+                    <!-- <div class="MuiTabs-root jss11">
+                      <div class="MuiTabs-scroller jss13 MuiTabs-fixed" style="overflow: hidden;">
+                        <div class="MuiTabs-flexContainer" role="tablist"><button
+                            class="MuiButtonBase-root MuiTab-root jss14 MuiTab-textColorInherit Mui-selected jss15"
+                            tabindex="0" type="button" role="tab" aria-selected="true"><span class="MuiTab-wrapper"><a
+                                href="staking/all"
+                                style="color: #E07416; text-decoration: inherit;">All</a></span></button><button
+                            class="MuiButtonBase-root MuiTab-root jss14 MuiTab-textColorInherit" tabindex="-1"
+                            type="button" role="tab" aria-selected="false"><span class="MuiTab-wrapper"><a
+                                href="staking/stake"
+                                style="color: black; text-decoration: inherit;">Stake</a></span></button><button
+                            class="MuiButtonBase-root MuiTab-root jss14 MuiTab-textColorInherit" tabindex="-1"
+                            type="button" role="tab" aria-selected="false"><span class="MuiTab-wrapper"><a
+                                href="staking/nominate"
+                                style="color: black; text-decoration: inherit;">Nominate</a></span></button></div><span
+                          class="jss16 jss18 MuiTabs-indicator jss12"
+                          style="left: 0px; width: 24.4375px;"><span></span></span>
+                      </div>
+                    </div> -->
+                    <div class="card-table_tableBody__3sUq2">
+                      <div class="card-table_wrap__2G4Sg">
+                        <div><span class="column-title_title__2U4V6" style="color: rgb(28, 34, 48);">Staking
+                            Token</span></div>
+                        <div><span class="column-title_title__2U4V6" style="color: rgb(28, 34, 48);">Total Pools
+                            Size</span></div>
+                        <div><span class="column-title_title__2U4V6" style="color: rgb(28, 34, 48);">End Time <br>
+                            (Countdown)</span></div>
+                        <div><span class="column-title_title__2U4V6" style="color: rgb(28, 34, 48);">Reward Token
+                            <Br>A</span></div>
+                        <div>
+                          <div style="display: flex; align-items: center;"><span class="column-title_title__2U4V6"
+                              style="color: rgb(28, 34, 48);">Reward Token <Br>B</span></div>
+                        </div>
+                      </div>
+                      <div class="card-table_balanceItemWrap__Uo8Zy"></div>
+                      <div class="card-table_balanceItemWrap__Uo8Zy">
+                        <div class="item_wrap__3H9Ah item_active__1Q4lz" style="background-color: white;">
+                          <div class="column-title_colTitle__2fPbx" style="color: rgb(28, 34, 48);">Total Staked Amount
+                          </div>
+                          <div class="item_col__5r-D5">
+                            <div class="item_logoContainer__YEHj8"><img class="item_logo__3hTVC" src="src/2logo.png"
+                                alt=""></div>
+                            <div class="item_stakeBalance__T1lmz">
+                              <p class="item_topLine__1ir14"
+                                style="font-weight: 700; margin-top: 15px; font-size: 2rem; color: rgb(28, 34, 48);">
+                                METAS</p>
+                              <!-- <p class="item_bottomLine__1vWKt">$0</p> -->
+                              <!-- <div class="item_stakeBalanceLabel__2EQZI">New</div> -->
+                            </div>
+                            <div></div>
+                          </div>
+                          <div class="column-title_colTitle__2fPbx" style="color: rgb(28, 34, 48);">Status</div>
+                          <div class="item_col__5r-D5 item_colColumn__3Saze">
+                            <span class="item_topLine__1ir14" style="color: #E07416; font-size: 18px;"
+                              id="total_pool_stacked">----</span>
+                          </div>
+                          <div class="column-title_colTitle__2fPbx" style="color: rgb(28, 34, 48);">Estimated APR<a
+                              target="_blank" rel="noreferrer nofollow noopener" href="support" class=""><span
+                                style="cursor: pointer; margin-left: 8px; border-radius: 8px; height: 16px; width: 16px; display: inline-flex; align-items: center; vertical-align: middle; justify-content: center;"><img
+                                  src="src/info.05e961b6.svg" alt=""></span></a></div>
+                          <div class="item_col__5r-D5">
+                            <div>
+                              <div class="item_topLine__1ir14" style="color: #E07416;">4 Nov 2021<br>(Block#12320300)</div>
+                            </div>
+                          </div>
+                          <div class="column-title_colTitle__2fPbx" style="color: rgb(28, 34, 48);">Estimated Daily
+                            Rewards</div>
+                          <div class="item_col__5r-D5"><span class="item_topLine__1ir14"
+                              style="color: #E07416; display: inline-block;">1.2 METAS<br> per Block</span></div>
+                          <div class="column-title_colTitle__2fPbx" style="color: rgb(28, 34, 48);">Earned Rewards<a
+                              target="_blank" rel="noreferrer nofollow noopener" href="support" class=""><span
+                                style="cursor: pointer; margin-left: 8px; border-radius: 8px; height: 16px; width: 16px; display: inline-flex; align-items: center; vertical-align: middle; justify-content: center;"><img
+                                  src="src/info.05e961b6.svg" alt=""></span></a></div>
+                          <div class="item_col__5r-D5" style="flex-wrap: nowrap;">
+                            <div><span class="item_topLine__1ir14" style="color: #E07416;">N/A</span></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card-table_stakeSidebarContainer__2KEp0 card-table_active__3JoHq">
+                    <div class="card-table_stakeSidebar__1kGgO">
+                      <div onclick="$('.card-table_active__3JoHq').hide();"
+                        class="card-table_stakeSidebarHeader__MoTWw"><button
+                          class="card-table_stakeSidebarClose__2eeog"><img src="src/close-icon.9e736c38.svg"
+                            alt="close"></button></div>
+                      <div class="frame_cardContainer__2VeS7"
+                        style="color: rgb(28, 34, 48); background-color: rgb(255, 255, 255);">
+                        <div class="header_header__2gZ-9">
+                          <div class="header_headerButtonContainer__1tNb3"></div>
+                          <div class="header_headerTitleContainer__1Z1Xz">
+                            <div class="header_headerTokenContainer__3o6sy">
+                              <img class="header_headerToken__3iQN0" src="src/2logo.png" alt="">
+                            </div><span class="header_headerTitle__3e5ae">Metaseer-Staking</span>
+                          </div>
+                        </div>
+                        <div class="header_divider__-rd6t"></div>
+                        <div class="frame_cardContent__14SIH" style="color: rgb(28, 34, 48);">
+                          <div class="stake-settings_body__2OhzJ">
+                            <div class="stake-settings_bodyTitle__3MTXL">Stake Amount</div>
+                            <div class="stake-settings_inputRow__3jupO"><span
+                                class="stake-settings_inputRowLabel__WNiS1"
+                                style="color: rgb(28, 34, 48);">METAS</span>
+                              <div class="stake-settings_inputRowContainer__3IYih">
+                                <div class="input_container__3unFi"><input id="stake_amount" type="number" value=""
+                                    placeholder="2500"></div>
+                                <!-- <span class="stake-settings_inputRowDesc__1_M1E">Min. Stake: 1 Metaseer</span> -->
+                                <!-- <div class="stake-settings_percentageContainer__No6e-"><button
+                                    class="percentage-button_container__1gaG6"><span
+                                      class="percentage-button_text__3jfAi">25%</span></button><button
+                                    class="percentage-button_container__1gaG6"><span
+                                      class="percentage-button_text__3jfAi">50%</span></button><button
+                                    class="percentage-button_container__1gaG6"><span
+                                      class="percentage-button_text__3jfAi">75%</span></button><button
+                                    class="percentage-button_container__1gaG6"><span
+                                      class="percentage-button_text__3jfAi">100%</span></button></div> -->
+                              </div>
+                            </div>
+                            <div class="frame_tooltipsContainer__2Vtuk">
+                              <div class="frame_tooltipItem___R9EJ">
+                                <div class="tooltip_container__2tJUP">
+                                  <div><span class="tooltip_label__3LoUu">Your balance:</span>
+                                  </div>
+                                  <div class="walletbalance tooltip_value__3DiVc">-----</div>
+                                </div>
+                              </div>
+                              <div class="frame_tooltipItem___R9EJ">
+                                <div class="tooltip_container__2tJUP">
+                                  <div><span class="tooltip_label__3LoUu">Lockup Period: </span>
+                                  </div>
+                                  <div class="tooltip_value__3DiVc">30 Days</div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="frame_cardFooterControls__3ZIjR">
+                              <button id="approve_spend"
+                                class="MuiButtonBase-root MuiButton-root MuiButton-contained frame_cardFooterControlsButton__3-4Y5 MuiButton-containedSecondary"
+                                tabindex="0" type="button" onclick="approveSpend();">
+                                <span class="MuiButton-label">Approve Stake</span>
+                                <span class="MuiTouchRipple-root"></span>
+                              </button>
+                              <button id="stack_btn"
+                                class="MuiButtonBase-root MuiButton-root MuiButton-contained frame_cardFooterControlsButton__3-4Y5 MuiButton-containedSecondary"
+                                tabindex="0" type="button" onclick="addToPool()" style="display: none;">
+                                <span class="MuiButton-label">Stake</span>
+                                <span class="MuiTouchRipple-root"></span>
+                              </button>
+                            </div>
+                          </div>
+                          <div>
+                            <br>
+                            <div class="frame_cardTextRow__2Tdku">
+                              <div class="frame_cardTextRowLabel__MZrIV">Unclaimed Reward:</div>
+                              <div id="rewardBalanceOf" class="frame_cardTextRowValue__27xKX">0 METAS
+                              </div>
+                            </div>
+                            <div class="frame_cardFooterControls__3ZIjR">
+                              <button
+                                class="MuiButtonBase-root MuiButton-root MuiButton-contained frame_cardFooterControlsButton__3-4Y5 MuiButton-containedSecondary"
+                                tabindex="0" type="button" onclick="claimReward()">
+                                <span class="MuiButton-label" >Claim</span>
+                                <span class="MuiTouchRipple-root"></span>
+                              </button>
+                            </div>
+                            <br>
+                            <div class="frame_cardTextRow__2Tdku">
+                              <div class="frame_cardTextRowLabel__MZrIV">Staked Token (<span
+                                  id="stakedbalance_timer">Available</span>)</div>
+                              <div id="stakeBalanceOf" class="frame_cardTextRowValue__27xKX" id="stake_Value">0 METAS
+                              </div>
+                            </div>
+                            <div class="frame_cardFooterControls__3ZIjR">
+                              <button id="unstake_btn2" disabled
+                                class="MuiButtonBase-root MuiButton-root MuiButton-contained frame_cardFooterControlsButton__3-4Y5 MuiButton-containedSecondary"
+                                tabindex="0" type="button" onclick="removeFromPool()">
+                                <span class="MuiButton-label">Unstake</span>
+                                <span class="MuiTouchRipple-root"></span>
+                              </button>
+                              <button id="unstake_btn" style="display: none;"
+                                class="MuiButtonBase-root MuiButton-root MuiButton-contained frame_cardFooterControlsButton__3-4Y5 MuiButton-containedSecondary"
+                                tabindex="0" type="button" onclick="removeFromPool()">
+                                <span class="MuiButton-label">Unstake</span>
+                                <span class="MuiTouchRipple-root"></span>
+                              </button>
+                            </div>
+                          </div>
+
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-table_container__3wkRX rules" style="display: none;">
+                  <div class="card-table_stakeSidebarContainer__2KEp0 card-table_active__3JoHq"
+                    style="width: 100% !important;">
+                    <div class="card-table_stakeSidebar__1kGgO">
+                      <div class="frame_cardContainer__2VeS7"
+                        style="color: rgb(28, 34, 48); background-color: rgb(255, 255, 255);">
+                        <div class="header_header__2gZ-9">
+                          <div class="header_headerButtonContainer__1tNb3"></div>
+                          <div class="header_headerTitleContainer__1Z1Xz">
+                            <div class="header_headerTokenContainer__3o6sy">
+                              <img class="header_headerToken__3iQN0" src="src/2logo.png" alt="">
+                            </div><span class="header_headerTitle__3e5ae">Staking Rules</span>
+                          </div>
+                        </div>
+                        <div class="header_divider__-rd6t"></div>
+                        <div class="frame_cardContent__14SIH" style="color: rgb(28, 34, 48);">
+                          <p>
+                            METAS Token Address: <b style="word-wrap: break-word;">0xfa1e1754bd2896d467930c97d07af799c531cb7d</b><br><br>
+
+                            Staking start date: 03/09/2021 (Starting Block 10592300)<br><br>
+
+                            Staking Entry Period: 60 days / 1728000 blocks<br><br>
+
+                            Minimum Staking 2,500 METAS<br><br>
+
+                            Rewards per block: 1.2 METAS<br><br>
+
+                            Total amount of rewards: 2,100,000 METAS<br><br>
+
+                            Staking Lock Up period: 30 days<br><br>
+
+                            METASEER Liquidity and Staking Program.<br><br>
+
+                            METASEER has officially succeeded in deploying a proprietary staking pool for investors and
+                            holders of METAS tokens (native token for METASEER platform). This means that METAS tokens
+                            can be bought on PancakeSwap and/or Raydium. It is very common for coins to be staked to
+                            receive extra rewards i.e., stake METAS to earn more METAS.<br><br>
+
+                            METASEER will allow investors and/or token holders to receive more rewards through a staking
+                            process. This activity is often referred to as yield farming, this concept is the core of
+                            the popular DeFi projects. By actively participating in yield farming, METAS token holders
+                            will be able to earn passive income on the Binance Smart Chain network (BSC). It is very
+                            similar to a regular proof-of-stake model whereby users will lock up their cryptocurrencies
+                            to get rewards after a predetermined period of time.<br><br>
+
+                            The total amount of METAS available for rewards will be 2,100,000 tokens that will be
+                            distributed to all the stakers. The rewards per block will be as follows (1.21527 METAS /
+                            Block). The minimum amount of tokens required to qualify for staking will be 2500 METAS. The
+                            staking lock up period will be 30 days upon start of staking and the staking entry period
+                            will last for 60days. Do keep in mind that the rewards will be paid out pro rata based on
+                            the time and amount of METAS that has been staked since day 1. The rewards distribution will
+                            begin from approximately block 10592408 on the Binance Smart Chain network.<br><br>
+
+                            Unlike typical farms that mint new tokens after every block has completed, METASEER will not
+                            be minting any new tokens. Instead the rewards will come from our liquidity wallet. This is
+                            done to ensure that the total supply of METAS will not increase and it will create a
+                            scarcity for the ecosystem which will in turn help with price. METASEER still has a long
+                            road ahead but we are well ahead of schedule and will strive to only bring to everyone the
+                            best platform.<br><br>
+
+                            SUPPLY<br>
+                            <b>30,000,000 METAS</b>
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer_wrapper__1CbDS" style="background-color: rgb(28, 34, 48);">
+      <div class="footer_container__3Mbmx">
+        <div class="footer_leftBlock__3sngK"><button
+            style="background-color: transparent; cursor: pointer; padding: 0px; border: 0px; display: flex; align-items: center;">
+            <div
+              style="width: 30px; height: 30px; border-radius: 8px; display: flex; justify-content: center; align-items: center;">
+
+            </div>
+            <span style="font-size: 14px; margin-left: 10px; color: white;">&copy; All rights reserved.
+              Metaseer</span>
+          </button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

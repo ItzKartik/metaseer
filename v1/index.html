@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>MetaSeer Staking Pool</title>
+  <!-- CSS only -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous" />
+  <link rel="stylesheet" href="font/myFont.css" />
+  <meta name="viewport" content="width=500, initial-scale=1" />
+  <link rel="icon" href="images/logo193.png" />
+  <!-- JS, Popper.js, and jQuery -->
+  <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+    crossorigin="anonymous"></script>
+  <script
+    src="https://raw.githubusercontent.com/talmand/jquery-animate-numbers/master/jquery.animateNumbers.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+    integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+    integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+    crossorigin="anonymous"></script>
+
+  <meta name="theme-color" content="#f9c75e" />
+  <script src="https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js"></script>
+  <script src="js/new.js"></script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+
+  <style>
+    /* .pool{
+      display: block !important;
+    }
+    .home{
+      display: none;
+    } */
+    .unstake_btn{
+      cursor: pointer;
+    }
+
+    body {
+      font-family: 'Nunito';
+    }
+
+    body:not(.web3) .web3true {
+      display: none;
+    }
+
+    .home .swapcard {
+      height: 175px;
+    }
+
+    .home .swapcard2 {
+      height: 115px;
+    }
+
+    .web3 .web3false {
+      display: none;
+    }
+
+    * {
+      font-weight: 300 !important;
+    }
+
+    .yield-badge {
+      position: absolute;
+      right: -10px;
+      top: -10px;
+      font-size: 20px;
+    }
+
+    body.approved .not-approved-spend {
+      display: none;
+    }
+
+    body:not(.approved) .approved-spend {
+      display: none;
+    }
+
+    * {
+      font-family: Nunito, Nunito, Nunito !important;
+    }
+
+    html {
+      height: 100%;
+      background-color: #3b3b3b;
+
+    }
+
+    body {
+      background-color: #3b3b3b;
+      background-image: url("images/1116905.jpg");
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+
+    }
+
+    .card {
+      background-color: rgba(0, 0, 0, 0.7);
+    }
+
+    .swapcardWithBG {
+     
+    }
+
+    .rdyToClaimCard {
+      background-image: url("images/pexels-photo-70497.jpeg");
+    }
+
+    .swapcard,
+    .swapcard2 {
+      display: inline-block;
+      width: 300px;
+      height: 240px;
+      margin: 10px;
+      transition: 1s box-shadow;
+    }
+
+    .swapcard:hover,
+    .swapcard2:hover {
+      box-shadow: 0 0 50px rgba(255, 255, 255, 0.3);
+    }
+
+    .tokenpair {
+      margin-bottom: 15px;
+    }
+
+    .token1,
+    .token2 {
+      display: inline-block;
+      height: 50px;
+      width: 50px;
+      border-radius: 99px;
+      border: 3px solid #fff;
+      box-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
+      background: #000;
+      background-size: cover !important;
+    }
+
+    .token2 {
+      position: relative;
+      right: 8px;
+    }
+
+    .token1 {
+      position: relative;
+      left: 8px;
+      z-index: 99;
+    }
+
+    .mcdonald {
+      background-image: url("images/logo194.png");
+    }
+
+    .eth {
+      background-image: url("images/eth.png");
+    }
+
+    .usdc {
+      background-image: url("images/usdc.png");
+    }
+
+    .usdt {
+      background-image: url("images/usdt.png");
+    }
+
+    .susd {
+      background-image: url("images/susd.png");
+    }
+
+    .yfi {
+      background-image: url("images/yfi.png");
+    }
+
+    .link {
+      background-image: url("images/link.png");
+    }
+
+    /*
+ * Globals
+ */
+    /* Links */
+    a,
+    a:focus,
+    a:hover {
+      color: #fff;
+    }
+
+    /* Custom default button */
+    .btn-secondary,
+    .btn-secondary:hover,
+    .btn-secondary:focus {
+      color: #333;
+      text-shadow: none;
+      /* Prevent inheritance from `body` */
+      background-color: #fff;
+      border: 0.05rem solid #fff;
+    }
+
+    /*
+ * Base structure
+ */
+    html {
+      height: 100%;
+    }
+
+    body {
+      min-height: 100%;
+      display: -ms-flexbox;
+      display: flex;
+      color: #fff;
+      text-shadow: 0 0.05rem 0.1rem rgba(0, 0, 0, 0.5);
+      box-shadow: inset 0 0 5rem rgba(0, 0, 0, 0.5);
+      padding: 50px 10px;
+    }
+
+    .cover-container {
+      max-width: 42em;
+    }
+
+    /*
+ * Header
+ */
+    .masthead {
+      margin-bottom: 2rem;
+    }
+
+    .masthead-brand {
+      margin-bottom: 0;
+    }
+
+    .nav-masthead .nav-link {
+      padding: 0.25rem 0;
+      color: rgba(255, 255, 255, 1);
+      background-color: transparent;
+      border-bottom: 0.25rem solid transparent;
+    }
+
+    .nav-masthead .nav-link:hover,
+    .nav-masthead .nav-link:focus {
+      border-bottom-color: rgba(255, 255, 255, 1);
+    }
+
+    .nav-masthead .nav-link+.nav-link {
+      margin-left: 1rem;
+    }
+
+    .nav-masthead .active {
+      color: #fff;
+      border-bottom-color: #fff;
+    }
+
+    @media (min-width: 48em) {
+      .masthead-brand {
+        float: left;
+      }
+
+      .nav-masthead {
+        float: right;
+      }
+    }
+    /*
+ * Cover
+ */
+    .cover {
+      padding: 4em 0rem;
+    }
+
+    .cover .btn-lg {
+      padding: 0.75rem 1.25rem;
+      font-weight: 700;
+    }
+
+    /*
+ * Footer
+ */
+    .mastfoot {
+      margin-top: 50px;
+      color: rgba(255, 255, 255, 0.5);
+    }
+  </style>
+
+  <script>
+    (function ($) {
+      $.fn.animateNumbers = function (stop, commas, duration, ease) {
+        return this.each(function () {
+          var $this = $(this);
+          var isInput = $this.is("input");
+          var start = parseInt(
+            isInput
+              ? $this.val().replace(/,/g, "")
+              : $this.text().replace(/,/g, "")
+          );
+          var regex = /(\d)(?=(\d\d\d)+(?!\d))/g;
+          commas = commas === undefined ? true : commas;
+
+          // number inputs can't have commas or it blanks out
+          if (isInput && $this[0].type === "number") {
+            commas = false;
+          }
+
+          $({ value: start }).animate(
+            { value: stop },
+            {
+              duration: duration === undefined ? 1000 : duration,
+              easing: ease === undefined ? "swing" : ease,
+              step: function () {
+                isInput
+                  ? $this.val(Math.floor(this.value))
+                  : $this.text(Math.floor(this.value));
+                if (commas) {
+                  isInput
+                    ? $this.val($this.val().replace(regex, "$1,"))
+                    : $this.text($this.text().replace(regex, "$1,"));
+                }
+              },
+              complete: function () {
+                if (
+                  parseInt($this.text()) !== stop ||
+                  parseInt($this.val()) !== stop
+                ) {
+                  isInput ? $this.val(stop) : $this.text(stop);
+                  if (commas) {
+                    isInput
+                      ? $this.val($this.val().replace(regex, "$1,"))
+                      : $this.text($this.text().replace(regex, "$1,"));
+                  }
+                }
+              },
+            }
+          );
+        });
+      };
+    })(jQuery);
+  </script>
+  <script src="js/ms_main.js"></script>
+</head>
+
+<body class="text-center">
+  <div class="d-flex h-200 mx-auto flex-column">
+    <header class="masthead" style="width: 1200px;">
+      <div class="inner">
+        <h3 class="masthead-brand" onclick="nav('home')">Staking Pool</h3>
+        <nav class="nav nav-masthead justify-content-center">
+          <a class="nav-link" href="#home" onclick="nav('home')">Home</a>
+          <a class="nav-link" href="#farm" onclick="nav('farms')">Pools</a>
+          <a class="nav-link" href="#about" onclick="nav('about')">Staking Rules</a>
+        </nav>
+      </div>
+    </header>
+    <main role="main" class="inner cover home">
+      <img src="images/logo193.png" height="400" />
+      <h1 class="cover-heading"><b>Staking Pool</b></h1>
+      <a> </a>
+      <p class="lead"></p>
+      <p class="lead web3false">
+        <a href="#" class="btn btn-lg btn-secondary" onclick="connectWeb3()">CONNECT WALLET</a>
+      </p>
+      <div class="card swapcard hide web3true">
+        <div class="card-body">
+          <h6 class="card-subtitle mb-2">Your Balance</h6>
+          <p class="card-text balance"><span>-</span> METAS</p>
+          <a href="#farms" onclick="nav('farms')" class="card-link btn btn-dark btn-lg"><img src="images/inbox.png"
+              height="28" /> Pool</a>
+        </div>
+      </div>
+      <div class="card hide web3true swapcard">
+        <div class="card-body">
+          <h6 class="card-subtitle hide mb-2">TOKEN PRICE</h6>
+          <p class="card-text tokenprice">-</p>
+          <a href="#" class="card-link btn btn-dark btn-lg" onclick="getlptoken(0)"><img
+              src="images/pancakeswap-cake-logo.png" height="28" /> Buy Metas</a>
+        </div>
+      </div>
+      <div class="card hide web3true swapcard2" STYLE="DISPLAY:NONE">
+        <div class="card-body">
+          <h6 class="card-subtitle hide mb-2">Total value staked</h6>
+          <p class="card-text tvl">$<span>-</span></p>
+        </div>
+      </div>
+
+
+    </main>
+
+    <main role="main" class="inner cover about" STYLE="DISPLAY:NONE">
+      <h1 class="lead" >Stake on Metaseer?</h1>
+      <div class="mx-auto" style="width: 800px;">
+        <p><strong>METAS Token Address: </strong>0xfa1e1754bd2896d467930c97d07af799c531cb7d&nbsp;</p>
+        <p><strong>Staking start date:</strong> 03/09/2021 (Starting Block 10592300)</p>
+        <p><strong>Staking Entry Period:&nbsp;</strong>60 days / 1728000 blocks</p>
+        <p><strong>Minimum Staking</strong> 2,500 METAS</p>
+        <p><strong>Rewards per block: </strong>&nbsp;1.2 METAS</p>
+        <p><strong>Total amount of rewards:</strong> 2,100,000 METAS&nbsp;</p>
+        <p><strong>Staking Lock Up period:</strong> 30 days</p>
+        <p><u>METASEER Liquidity and Staking Program.</u></p>
+        <p>METASEER has officially succeeded in deploying a proprietary staking pool for investors and holders of METAS tokens (native token for METASEER platform). This means that METAS tokens can be bought on PancakeSwap and/or Raydium. It is very common for coins to be staked to receive extra rewards i.e., stake METAS to earn more METAS.&nbsp;</p>
+        <p>METASEER will allow investors and/or token holders to receive more rewards through a staking process. This activity is often referred to as yield farming, this concept is the core of the popular DeFi projects. By actively participating in yield farming, METAS token holders will be able to earn passive income on the Binance Smart Chain network (BSC). It is very similar to a regular proof-of-stake model whereby users will lock up their cryptocurrencies to get rewards after a predetermined period of time.&nbsp;</p>
+        <p>The total amount of METAS available for rewards will be 2,100,000 tokens that will be distributed to all the stakers. The rewards per block will be as follows (1.21527 METAS / Block). The minimum amount of tokens required to qualify for staking will be 2500 METAS. The staking lock up period will be 30 days upon start of staking and the staking entry period will last for 60days. Do keep in mind that the rewards will be paid out pro rata based on the time and amount of METAS that has been staked since day 1. The rewards distribution will begin from approximately block 10592408 on the Binance Smart Chain network.&nbsp;</p>
+        <p>Unlike typical farms that mint new tokens after every block has completed, METASEER will not be minting any new tokens. Instead the rewards will come from our liquidity wallet. This is done to ensure that the total supply of METAS will not increase and it will create a scarcity for the ecosystem which will in turn help with price. METASEER still has a long road ahead but we are well ahead of schedule and will strive to only bring to everyone the best platform.</p>
+      </div>
+
+ 
+        <div class="card">
+          <div class="card-body">
+            <h6 class="card-subtitle mb-2">SUPPLY</h6>
+            <p class="card-text supply"><span>30,000,000</span> METAS</p>
+          </div>
+        </div>
+
+
+    </main>
+
+    <main role="main" class="inner cover farms" style="display: none">
+      <div class="">
+        <div class="card swapcard swapcardWithBG">
+          <span class="badge badge-danger yield-badge">Hot</span>
+          <div class="card-body">
+            <div class="tokenpair">
+              <div class="token1 mcdonald"></div>
+
+            </div>
+            <h2 class="card-subtitle mb-2">Metaseer</h2>
+            <p class="card-text apy0">
+              <i><b>1.2 </b> METAS per Block</i>
+            </p>
+            <a href="#pool0" onclick="nav('pool0')" class="card-link btn btn-secondary btn">
+              Stake
+            </a>
+            <a href="#" class="card-link btn btn-secondary btn" onclick="getlptoken(0)">
+              Trade
+            </a>
+          </div>
+        </div>
+
+
+        <div class="card swapcard swapcardWithBG" STYLE="DISPLAY:NONE">
+          <div class="card-body">
+            <div class="tokenpair">
+              <div class="token1 mcdonald"></div>
+            </div>
+            <h6 class="card-subtitle mb-2">Coming Soon</h6>
+            <p class="card-text apy0">
+              APY <span class="pool5yield">---.-%</span>
+            </p>
+            <a href="#" onclick="#" class="card-link btn btn-secondary btn-lg">
+              X
+            </a>
+            <a href="#" class="card-link btn btn-secondary btn-lg" onclick="#">
+              X
+            </a>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <main role="main" class="inner cover pool" style="display: none">
+      <img src="images/logo193.png" height="200" />
+      <h1 class="cover-heading">MetaSeer Stake</h1>
+      <p class="lead"></p>
+      <div class="row">
+        <div class="card rdyToClaimCard hide web3true col-md-12 col-12">
+          <div class="card-body">
+            <h2 class="card-subtitle mb-2">Total Pool Size</h2>
+            <p id="totalpoolstacked" class="card-text">-</p>
+          </div>
+        </div>
+        <div class="card rdyToClaimCard hide web3true col-md-12 col-12">
+          <div class="card-body">
+            <h2 class="card-subtitle mb-2">Unclaimed Reward</h2>
+            <p id="rewardBalanceOf" class="card-text rewardbalance">--</p>
+            <a href="#" class="card-link btn btn-danger btn-lg" onclick="claimReward()">Claim</a>
+          </div>
+        </div>
+        <div class="card hide web3true col-md-6 col-12">
+          <div class="card-body">
+            <h3 class="card-subtitle mb-2">Your wallet</h3>
+            <p class="card-text walletbalance">-</p>
+            <p class="card-text">Lockup Period: 30 Days</p>
+            <div class="not-approved-spend">
+              <a href="#" class="card-link btn btn-secondary btn-lg" onclick="approveSpend()">Approve Spend</a>
+            </div>
+            <div class="approved-spend">
+              <a href="#" class="card-link btn btn-secondary btn-lg" onclick="addToPool()"><img src="images/inbox.png"
+                  height="28" />Stake</a>
+            </div>
+          </div>
+        </div>
+        <div class="card hide web3true col-md-6 col-12">
+          <div class="card-body">
+            <h3 class="card-subtitle mb-2">Staked token</h3>
+            <p id="stakeBalanceOf" class="card-text stakedbalance">-</p>
+            <p id="stakedbalance_timer" class="card-text stakedbalance_timer"></p>
+            <a class="card-link btn btn-secondary btn-lg unstake_btn2" style="display: none; opacity: .7;" onclick="alert('Unstake will be available when the timer ends');"><img
+              src="images/outbox.png" height="28" />Unstake</a>
+            <a class="card-link btn btn-secondary btn-lg unstake_btn" onclick="removeFromPool()"><img
+                src="images/outbox.png" height="28" />Unstake</a>
+
+          </div>
+        </div>
+        <div class="hide web3true col-md-12 col-12">
+          <div class="card-body">
+            <a href="#" class="card-link btn btn-info btn-lg" f onclick="getlptoken()">Token Info</a>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="mastfoot fixed-bottom ">
+
+      <div class=" pt-2">
+        <div id="footer-content">
+          <p class="d-flex justify-content-around  pt-2">
+
+            <a style="color:white; font-size:15px; font-weight: 100;" href="https://metaseer.io/"
+              target="_blank">MetaSeer.io</a>
+            <a style="color:white; font-size:15px; font-weight: 100;" href="https://www.coingecko.com/en/coins/metaseer"
+              target="_blank"><img src="images/CGlogo.png" height="32" /> Coingecko</a>
+
+            <a style="color:white; font-size:15px; font-weight: 100;" href="https://t.me/MSEERofficial"
+              target="_blank"><img src="images/Telegram-icon.png" height="32" /> Telegram</a>
+          </p>
+        </div>
+      </div>
+    </footer>
+  </div>
+</body>
+
+</html>
